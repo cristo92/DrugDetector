@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrugDetector" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="5FS-YI-TtS">
+                                <rect key="frame" x="24" y="40" width="327" height="465"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8p-2k-Wrp">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="30"/>
+                                        <state key="normal" title="Take a photo"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HvZ-7C-JIb"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omx-gv-DWd">
+                                        <rect key="frame" x="0.0" y="45" width="327" height="30"/>
+                                        <state key="normal" title="Choose a photo"/>
+                                        <connections>
+                                            <action selector="choosePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mby-JW-um1"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Zk-Wa-dHa">
+                                        <rect key="frame" x="0.0" y="90" width="327" height="330"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="327" id="I8O-b5-8YX"/>
+                                            <constraint firstAttribute="height" constant="330" id="nuD-6V-GgZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DIZ-qC-2dn">
+                                        <rect key="frame" x="0.0" y="435" width="327" height="30"/>
+                                        <state key="normal" title="Submit"/>
+                                        <connections>
+                                            <action selector="submit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jKo-wt-sTu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5FS-YI-TtS" secondAttribute="trailing" constant="4" id="9TI-3P-uWR"/>
+                            <constraint firstItem="5FS-YI-TtS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="NPg-pl-peP"/>
+                            <constraint firstItem="5FS-YI-TtS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="OZl-M7-dic"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5FS-YI-TtS" secondAttribute="trailing" constant="8" id="amc-xi-f2Z"/>
+                            <constraint firstItem="5FS-YI-TtS" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="dD6-Nk-b2S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="choosePhotoButton" destination="Omx-gv-DWd" id="efI-Lq-Sai"/>
+                        <outlet property="photoImageView" destination="5Zk-Wa-dHa" id="Nh5-cr-98z"/>
+                        <outlet property="submitButton" destination="DIZ-qC-2dn" id="h05-nT-5H5"/>
+                        <outlet property="tookPhotoButton" destination="y8p-2k-Wrp" id="iaD-ka-IVe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+        </scene>
+    </scenes>
+</document>
