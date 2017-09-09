@@ -1,0 +1,9 @@
+{
+	"drugs": [
+		"Paracetamol",
+		"APAP"
+	],
+	"mixture": [
+		["Paracetamol", "APAP"]
+	]
+}
