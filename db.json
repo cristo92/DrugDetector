@@ -1,9 +1,12 @@
 {
-	"drugs": [
-		"Paracetamol",
-		"APAP"
-	],
-	"mixture": [
-		["Paracetamol", "APAP"]
-	]
+	"API1": 
+	{
+		"drugs": [
+			"Paracetamol",
+			"APAP"
+		],
+		"mixture": [
+			["Paracetamol", "APAP"]
+		]
+	}
 }
